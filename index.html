@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PickMyBook - Chatbot & Book Thumbnails</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem;
+    }
+    .features-container {
+      display: flex;
+      flex-wrap: wrap; /* Wrap items on small screens */
+      justify-content: center; /* Center items horizontally */
+      gap: 2.5rem; /* Space between items */
+      margin-top: 2rem;
+    }
+
+     .feature-item {
+      background-color: #ffffff;
+      padding: 1.5rem 2rem; /* Increased padding for bigger size */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Slightly stronger shadow */
+      text-align: center;
+      min-width: 200px; /* Increased width */
+      font-weight: bold;
+      font-size: 1.2rem; /* Larger text */
+      transition: transform 0.2s;
+    }
+
+     .feature-item:hover {
+      transform: scale(1.05); /* Slight zoom on hover for interactivity */
+    }
+    .book-thumbnails {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .book-thumbnails img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f1f1f1;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📚 PickMyBook</h1>
+  <p>Your Personalized Book Recommendation Assistant</p>
+</header>
+
+<section class="hero">
+  <h2>Discover books you'll love</h2>
+  <p>Ask for books by mood, genre, or author. Let the chatbot do the magic!</p>
+</section>
+
+<section class="features">
+  <h3>Features:</h3>
+  <div class="features-container">
+    <div class="feature-item">📖 Genre-based recommendations</div>
+    <div class="feature-item">😊 Mood-based book suggestions</div>
+    <div class="feature-item">🧠 Learn about authors and book details</div>
+    <div class="feature-item">🎯 Personalized book discovery</div>
+  </div>
+</section>
+
+<!-- Watson Assistant Embed Script -->
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "d8f991c5-3899-4ef3-9e02-b7c3f9b1cb2c", // Your integration ID
+    region: "eu-de", // Your region
+    serviceInstanceID: "9a761341-6c70-4392-92c3-a0fa4af96eeb", // Your service instance ID
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + 
+          (window.watsonAssistantChatOptions.clientVersion || 'latest') + 
+          "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+<section class="book-thumbnails">
+
+  <!-- Self-Help & Non-fiction -->
+  <a href = " https://www.flipkart.com/srimad-bhagavad-gita-hindi-2018-new-edition-iskcon/p/itm9dc7b1dcf5509?pid=RBKFJ3Y5HWDAVY63&lid=LSTRBKFJ3Y5HWDAVY63CDZTFX&marketplace=FLIPKART&q=bhagavad+gita&store=bks&srno=s_1_3&otracker=search&otracker1=search&fm=organic&iid=74e20e50-0131-4679-b81f-ae33694ee6e5.RBKFJ3Y5HWDAVY63.SEARCH&ppt=hp&ppn=homepage&ssid=lr6uov16q80000001761403265583&qH=5e063bcd1a4bb90f "><img src="https://www.bhagavad-gita.us/wp-content/uploads/2012/09/gita-104.jpg" alt="Bhagavad Gita"></a>
+
+<a href = "https://www.flipkart.com/atomic-habit-english/p/itm9f086524a700b?pid=RBKHDWYWDQQ3HPRT&lid=LSTRBKHDWYWDQQ3HPRTDWMTMR&marketplace=FLIPKART&q=atomic+habits&store=bks&srno=s_1_6&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_ps&fm=organic&iid=en_Fu_Eaa_rYqUKZxx1DK9aJVkxH19nsrodCSLDZTFgHiMJllQuMFkmDYhTsBwFHcgI36WhFdKXJtWoIwUsEaPvqQ%3D%3D&ppt=pp&ppn=pp&ssid=pcvz18p5nk0000001761403340789&qH=1a4e5e36fe1144ee"> <img src="https://jamesclear.com/wp-content/uploads/2025/06/atomic-habits-dots.png" alt="Atomic Habits"> </a>
+
+<a href = " https://www.flipkart.com/the-white-tiger/p/itmfc4znsvjsasqg?pid=9781848878082&lid=LSTBOK9781848878082AXA0SB&marketplace=FLIPKART&q=the+white+tiger+book&store=bks&srno=s_1_2&otracker=AS_QueryStore_OrganicAutoSuggest_1_9_sc_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_9_sc_na_ps&fm=organic&iid=ec2c0749-58d3-425f-a58f-d01acf25e001.9781848878082.SEARCH&ppt=pp&ppn=pp&ssid=dwm1j4utkw0000001761403503699&qH=8f4f87b27f2cccd8 "> 
+<img src="https://imgs.search.brave.com/T-qN1o0JTG1E99wS4FbtbZwBbmnTM_SJ54R6N24o8BA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Ym9va2lzaGVsZi5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTkvMTAvQm9vay1S/ZXZpZXctVGhlLVdo/aXRlLVRpZ2VyLWJ5/LUFyYXZpbmQtQWRp/Z2EtZTE2ODE4MjA2/MTA5MDMucG5n" alt="The White Tiger"> </a>
+ 
+
+  <!-- Thriller -->
+  <a href = "https://www.flipkart.com/gone-girl/p/itmfbygxzebu6etf?pid=9780753827666&lid=LSTBOK9780753827666Q9ZM54&marketplace=FLIPKART&q=gone+girl+book&store=bks&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_9_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_9_na_na_ps&fm=organic&iid=en_knSlecFkB6rM3S6m9s8j6Y4P7wOAvHv88nxOAoyGhkk0GIKOiDnVKQED6q2qT0jRcvZbV0aj9SZiXjiZMS1gLQ%3D%3D&ppt=pp&ppn=pp&ssid=yneqvaas280000001761403862472&qH=bddf9ec09c6803aa"><img src="https://imgs.search.brave.com/cK-uGAr0jp1IhiLWacMZc6kIjAgr2W6ZDR0QuYf0SA8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/Ym9va2Nob3IuY29t/L2ltYWdlcy9jb3Zl/ci81NzIvOTc4MDc1/MzgyNzY2Ni5qcGc" alt="Gone Girl"></a>
+
+  <a href = "https://www.flipkart.com/the-girl-on-the-train/p/itm8774181f8a808?pid=RBKG8T37ZAFR2TRU&lid=LSTRBKG8T37ZAFR2TRUDLWA0S&marketplace=FLIPKART&q=the+girl+on+the+train+book&store=bks&srno=s_1_2&otracker=AS_QueryStore_OrganicAutoSuggest_1_16_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_16_na_na_ps&fm=organic&iid=en_Bftx1Ajjjc6ce0eBZoLCqrtf1ciuQ1bqxvFOyFN9hXUbrbppzSjsPy_wdxvLD6qWUcWa6I8wCbYNuLKCHk0P-Q%3D%3D&ppt=pp&ppn=pp&ssid=45c6yy4rsw0000001761403969680&qH=3469f9c46cac6949"><img src="https://imgs.search.brave.com/gvpd-54-M6Eri44PAEYNBVF1-9ctDqZaoFAbBpSI9ig/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5ucHIub3JnL2Fz/c2V0cy9iYWtlcnRh/eWxvci9jb3ZlcnMv/dC90aGUtZ2lybC1v/bi10aGUtdHJhaW4v/OTc4MTU5NDYzMzY2/OV9jdXN0b20tYzE1/Yzk3OTZhM2JmN2Nj/YzI5NDQxMjg1NmQ3/YzhjZjMxYmJlNGEy/Ny5qcGc_cz0xMTAw/JmM9ODUmZj1qcGVn" alt="The Girl on the Train"></a>
+
+  <a href = "https://www.flipkart.com/silent-patient-table-contents/p/itmf4yczxnchj2gy?pid=9781409181637&lid=LSTBOK9781409181637HIHAWG&marketplace=FLIPKART&q=the+silent+patient+book&store=bks&srno=s_1_3&otracker=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_ps&fm=organic&iid=0286506a-c970-4638-8a30-e56f224ce93e.9781409181637.SEARCH&ppt=pp&ppn=pp&ssid=sbhv5otn000000001761404099359&qH=18cfbb5cf13eba4a"><img src="https://imgs.search.brave.com/--Qk-jW8hL7-Q_MNA8jVNzCZnHv1BOjPlTj_76Fsmbw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/dGhlLXNpbGVudC1w/YXRpZW50LWJvb2st/cGRmLXN1bW1hcnkt/djAtdWJtNW00ZGY3/dGVkMS5wbmc_d2lk/dGg9MjQ5JmZvcm1h/dD1wbmcmYXV0bz13/ZWJwJnM9ZGU1NjYy/MTNjZTM1M2UzYjU5/MTQyZjYyNjkwZWFk/YjZlZTkzZTY1YQ" alt="The Silent Patient"></a>
+
+  <a href = "https://www.flipkart.com/before-go-sleep/p/itmfbsd6fy6gzvys?pid=9781784160012&lid=LSTBOK9781784160012KM7NXB&marketplace=FLIPKART&q=before+i+go+to+sleep+book&store=bks&srno=s_1_3&otracker=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_ps&fm=organic&iid=6cae2fa9-9ebe-479d-9d87-706029b68e7c.9781784160012.SEARCH&ppt=pp&ppn=pp&ssid=l1a7kq3mfk0000001761404198279&qH=701c64201b103b46"><img src="https://imgs.search.brave.com/d80QaNuh6QJVv5YJBFo2M3LVUAaU6JXo6Ib9ldFRuJA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzgxZUU2ZFJveWNM/LmpwZw" alt="Before I Go to Sleep"></a>
+  <a href = "https://www.amazon.com/Vinci-Code-Dan-Brown/dp/1400079179"><img src="https://imgs.search.brave.com/7X8b5W7x-cunw1fsvcYmy5FPtTmWfyBKE08UqEq4LHE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFFSUNzSEZIQUwu/anBn" alt="The Da Vinci Code"></a>
+  <!-- Romance & Drama -->
+  <a href = "https://www.amazon.in/Ends-Us-Novel-Colleen-Hoover/dp/1501110365/ref=sr_1_1?sr=8-1"><img src="https://imgs.search.brave.com/LMZMLNvN36JHdoVY3gPtMhQbYeo3BGfwxAL1xsTznrs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QlpEUmlNakkz/WlRNdE1qUTBZeTAw/TjJNekxUZ3hOek10/TURJd1pHUTNOekl4/TkROaVhrRXlYa0Zx/Y0djQC5qcGc" alt="It Ends With Us"></a>
+
+  <a href = "https://www.amazon.in/PS-Love-You-Cecelia-Ahern/dp/0008331650/ref=sr_1_1?sr=8-1"><img src="https://imgs.search.brave.com/qqZiqxZVk_CW0v1O4yHnoef5iJrt3EpwO5dMqul1ngs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QlptRmtZVGRo/TXpBdE9XVTBPUzAw/WmpSaUxXSTRPRE10/WlRBek56UTNNREE0/WTJVelhrRXlYa0Zx/Y0djQC5qcGc" alt="P.S. I Love You"></a>
+
+  <a href = "https://www.amazon.in/Me-Before-You-Jojo-Moyes/dp/0718157834/ref=sr_1_1?sr=8-1"><img src="https://imgs.search.brave.com/DeT8YXo01HaOnvFOs8EWuSctQN4mFkYaKM3nIROeLW8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk1UUTJOakU0/TkRFMk5WNUJNbDVC/YW5CblhrRnRaVGd3/T1Rjd05ERTVOekVA/LmpwZw" alt="Me Before You"></a>
+
+  
+
+  <!-- Fantasy -->
+  <a href = "https://www.amazon.in/Harry-Potter-ChildrenS-Paperback-Boxed/dp/1408856778/ref=sr_1_1?crid=2I23PJ9E83YES&dib=eyJ2IjoiMSJ9.z3lfCjx0I80bvjbtfmLzHDOn71GCIu42otD4UWjbXEc1ZA_LZCXElFzc3gB73lYVVXS71TgxO-6WgKsMzJAar_en9wCJh8DMm6aqaZ07Rva1ALuqqTfZy6QQuRBqPehiCHC2hbXi5kxPbMYd-X53UX8sFvvV7aGQ861J0ZAiU1GkunUD-mm-waEFlrKuxcUZ0KqFblD34Y2x9XVCUYq80ExOKGO9e31Z4qvYzqwLIx0.RaQ2ahE6mwiN-091bwBLkld3ClEifTCWpjWjYbyv0Xc&dib_tag=se&keywords=harry+potter+book+set+1-8&qid=1762319813&sprefix=harry+potter+book+%2Caps%2C278&sr=8-1"><img src="https://imgs.search.brave.com/9RZFFCycZ2NIaOEotgSRgvzO_nrpU2Bglk8GZ4WubZc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTE1MlhUcTI0K0wu/anBn" alt="Harry Potter"></a>
+
+  <a href = "https://www.amazon.in/RICK-RIORDAN-COLLECTION-Lightning-Labyrinth/dp/0141352027/ref=sr_1_1?sr=8-1"><img src="https://imgs.search.brave.com/giJrYpOCY2hnAt3Rozz2rTpSi5m2l7mH2E8k5TKmPRg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGVuZ3Vpbi5jby5p/bi93cC1jb250ZW50/L3VwbG9hZHMvMjAy/My8wNi85NzgwMTQx/MzQ2ODA5LTIuanBn" alt="Percy Jackson"></a>
+
+  <a href = "https://www.amazon.in/Mistborn-Trilogy-Boxed-Brandon-Sanderson/dp/147321369X/ref=sr_1_1?crid=1W6CKZCUF25LQ&dib=eyJ2IjoiMSJ9.7_42tt4pYlxsGFb76EpcUOakTZmzTXnUYjo13s3u2tWKU9h4VS-smw-25z2DuoVIMnXcWy0VC79b9MbZH5ckKTdzFFCk7amLUo1LtwqQbM6dfeEcXvIOFzzuxIYboPLx5g0IP3kDQlrUfiFOsnzNo-16HQ2SuS5w8AQcTNq6DCWiqiWkfUg_gyrVvhPOcvfd4DNxP1GLkc2jKj4jwG_1zRl3Lh5xNPyssJNrGgzQE8Q.ezNYaf_MS94UOfuZsWy2DH8CaeZ19t5n1IaNZaxb3CQ&dib_tag=se&keywords=mistborn+trilogy&qid=1762319957&sprefix=Mistborn%2Caps%2C283&sr=8-1"><img src="https://imgs.search.brave.com/ji099FUS-KovDyWTB9Fau_F4WUYH6WvGY_gWy_H1_7w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFGajRwUzg3Qkwu/anBn" alt="Mistborn"></a>
+
+  <a href = "https://www.amazon.in/Immortals-Meluha-Shiva-Trilogy-Book/dp/9356290520/ref=sr_1_1_sspa?crid=1L6PXU22W0PG2&dib=eyJ2IjoiMSJ9.TCHAn5lU1ucEmWISkLSbBKsGuAF5q7FsbgrAzTXtw3WZWL2KljnEwP04EZER_MQIfD0YkQ0q__6wnQBUFc3D4Cf1IPWxgae4npfjmOMuRgpzMuWa4ga8bgPZ27JtYSAMnTrbhYu2CtgrdjZVWjlEOWyvM6v3EldW2H2dkTJp2hfjS2mnx0KCMfph0V8R0Hx-KOldpOYQ-WB2dTjn3dPb8Svx4h3Cnm-TOIvi3Q2qYEs.2xCBS6r4RQGSjP7qUmkwOrrcYnUjQwH-AaX1FNK2kGs&dib_tag=se&keywords=The+Immortals+of+Meluha&qid=1762320016&sprefix=the+immortals+of+meluha%2Caps%2C267&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"><img src="https://upload.wikimedia.org/wikipedia/en/0/0e/The_Immortals_Of_Meluha.jpg" alt="The Immortals of Meluha"></a>
+
+  <a href = "https://www.amazon.in/Hobbit-Essential-Modern-Classics/dp/0007458428/ref=sr_1_6?sr=8-6"><img src="https://imgs.search.brave.com/6uPCbRwunGqj44DE73KwXAsUkqKo41UiRZYQZilpBic/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9waWN0/dXJlYm9va3JlcG9y/dC53b3JkcHJlc3Mu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDEwLzEwL3RoZWhv/YmJpdHBhcnRzaXgy/LnBuZz93PTQ1NSZo/PTU4Ng" alt="The Hobbit"></a>
+
+  <!-- Sci-Fi -->
+  <a href = "https://www.amazon.in/Dune-Frank-Herbert/dp/0441172717/ref=sr_1_2?crid=2SGG3U0FA5HVN&dib=eyJ2IjoiMSJ9.X0qjTdobD9o99AQPq0tIpH7Gu92U32zcv_smOEbsfR-z58mLRcOxElE01pJv43j0oeDRg_-6DC4ExSEBoPxd3JRl3gpNQpK5rKBxwnPq18RhBWaPft1DbXpWa-Bzq90zc2oYkcJFd_CZTFpyJmIFpmKpq-wIlUIElxIuRERIbkhaiA_4g2mK3I9QxMHqCRSZCjJD28wW9Ug8eXVwyAha1XKdQP7-v1w3LcP5sHrF-Bc.vmKCB4gNl8p6c2BWu2dzxnjnL42gPkKD0TpDCISv_rk&dib_tag=se&keywords=dune+book&qid=1762320201&sprefix=dune+book%2Caps%2C269&sr=8-2"><img src="https://m.media-amazon.com/images/I/81Ua99CURsL._SY522_.jpg" alt="Dune"></a>
+
+  <a href = "https://www.amazon.in/ENDERS-GAME-BOOK-Book-Ender/dp/0356500845/ref=sr_1_1?sr=8-1"><img src="https://m.media-amazon.com/images/I/71RoGB0yKOL._SY466_.jpg" alt="Ender’s Game"></a>
+
+  <a href = "https://www.amazon.in/Neuromancer-Sprawl-Trilogy-William-Gibson/dp/0441569595/ref=sr_1_1?sr=8-1"><img src="https://imgs.search.brave.com/K8zdxNmwv3cRKAyAGv7gejG-QcSTHgzOvk_Lyeiexmo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDQ3MDE0/NjUucG5n" alt="Neuromancer"></a>
+
+  <a href = "https://www.amazon.in/Snow-Crash-Neal-Stephenson/dp/0241953189/ref=sr_1_1?sr=8-1"><img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Snowcrash.jpg?20200523172524" alt="Snow Crash"></a>
+
+  
+  
+</section>
+
+<footer>
+  Made with ❤️ for book lovers | © 2025 PickMyBook
+</footer>
+
+</body>
+</html>
+
